@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>588</width>
-    <height>448</height>
+    <height>470</height>
    </rect>
   </property>
   <property name="accessibleName">
@@ -154,6 +154,18 @@
               </size>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_2">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
               <item>
                <widget class="QLabel" name="label">
                 <property name="text">
@@ -262,7 +274,7 @@
 }</string>
                       </property>
                       <property name="text">
-                       <string>?</string>
+                       <string notr="true">?</string>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -483,55 +495,44 @@
                </layout>
               </item>
               <item>
-               <widget class="QWidget" name="touchIDContainer" native="true">
-                <layout class="QHBoxLayout" name="touchIDLayout">
-                 <property name="spacing">
-                  <number>0</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <spacer name="horizontalSpacer">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
-                  <widget class="QCheckBox" name="checkTouchID">
-                   <property name="text">
-                    <string>TouchID for Quick Unlock</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
                <layout class="QHBoxLayout" name="dialogButtonsLayout">
                 <property name="topMargin">
                  <number>15</number>
                 </property>
+                <item>
+                 <spacer name="horizontalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="quickUnlockCheckbox">
+                  <property name="toolTip">
+                   <string>Securely store your password to unlock your database using biometrics.
+You must enter your password on the first unlock.</string>
+                  </property>
+                  <property name="layoutDirection">
+                   <enum>Qt::RightToLeft</enum>
+                  </property>
+                  <property name="text">
+                   <string>Setup Quick Unlock</string>
+                  </property>
+                  <property name="checked">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
                 <item alignment="Qt::AlignRight">
                  <widget class="QDialogButtonBox" name="buttonBox">
                   <property name="standardButtons">
-                   <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+                   <set>QDialogButtonBox::Close|QDialogButtonBox::Ok</set>
                   </property>
                  </widget>
                 </item>
@@ -607,7 +608,6 @@
   <tabstop>buttonBrowseFile</tabstop>
   <tabstop>challengeResponseCombo</tabstop>
   <tabstop>buttonRedetectYubikey</tabstop>
-  <tabstop>checkTouchID</tabstop>
  </tabstops>
  <resources/>
  <connections/>

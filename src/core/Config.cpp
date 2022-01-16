@@ -80,7 +80,6 @@ static const QHash<Config::ConfigKey, ConfigDirective> configStrings = {
     {Config::GlobalAutoTypeModifiers,{QS("GlobalAutoTypeModifiers"), Roaming, 0}},
     {Config::FaviconDownloadTimeout,{QS("FaviconDownloadTimeout"), Roaming, 10}},
     {Config::UpdateCheckMessageShown,{QS("UpdateCheckMessageShown"), Roaming, false}},
-    {Config::UseTouchID,{QS("UseTouchID"), Roaming, false}},
 
     {Config::LastDatabases, {QS("LastDatabases"), Local, {}}},
     {Config::LastKeyFiles, {QS("LastKeyFiles"), Local, {}}},
@@ -145,6 +144,7 @@ static const QHash<Config::ConfigKey, ConfigDirective> configStrings = {
     {Config::Security_ResetTouchIdScreenlock,{QS("Security/ResetTouchIdScreenlock"), Roaming, true}},
     {Config::Security_NoConfirmMoveEntryToRecycleBin,{QS("Security/NoConfirmMoveEntryToRecycleBin"), Roaming, true}},
     {Config::Security_EnableCopyOnDoubleClick,{QS("Security/EnableCopyOnDoubleClick"), Roaming, false}},
+    {Config::Security_QuickUnlock, {QS("Security/QuickUnlock"), Local, {}}},
 
     // Browser
     {Config::Browser_Enabled, {QS("Browser/Enabled"), Roaming, false}},
@@ -368,7 +368,8 @@ static const QHash<QString, Config::ConfigKey> deprecationMap = {
     {QS("LastAttachmentDir"), Config::Deleted},
     {QS("KeeShare/LastDir"), Config::Deleted},
     {QS("KeeShare/LastKeyDir"), Config::Deleted},
-    {QS("KeeShare/LastShareDir"), Config::Deleted}};
+    {QS("KeeShare/LastShareDir"), Config::Deleted},
+    {QS("UseTouchID"), Config::Security_QuickUnlock}};
 
 /**
  * Migrate settings from previous versions.

@@ -1463,10 +1463,6 @@ Backup database located at %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>TouchID for Quick Unlock</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Unlock failed and no password given</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1487,10 +1483,6 @@ To prevent this error from appearing, you must go to &quot;Database Settings / S
     </message>
     <message>
         <source>Key file help</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1563,6 +1555,31 @@ We recommend you update your KeePassXC installation.</source>
     </message>
     <message>
         <source>Database unlock canceled.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Setup Quick Unlock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unlock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Follow instructions in the Operating System dialog to complete Quick Unlock.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Password provided by Quick Unlock...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Quick Unlock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Securely store your password to unlock your database using biometrics.
+You must enter your password on the first unlock.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7762,6 +7779,10 @@ Please consider generating a new key file.</source>
         <source>Browser Statistics</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Windows Hello</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>QtIOCompressor</name>
@@ -8751,6 +8772,33 @@ Example: JBSWY3DPEHPK3PXP</source>
     </message>
     <message>
         <source>Could not register global shortcut</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>WindowsHello</name>
+    <message>
+        <source>Failed to create Windows Hello credential.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to sign challenge using Windows Hello.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to init KeePassXC crypto.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to encrypt key data.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to get Windows Hello credential.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to decrypt key data.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

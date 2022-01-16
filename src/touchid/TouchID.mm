@@ -166,7 +166,7 @@ bool TouchID::getKey(const QString& databasePath, QByteArray& passwordKey) const
     }
 
     // checks if encrypted PasswordKey is available and is stored for the given database
-    if (!this->m_encryptedMasterKeys.contains(databasePath)) {
+    if (!containsKey(databasePath)) {
         debug("TouchID::getKey - No stored key found");
         return false;
     }
@@ -217,11 +217,17 @@ bool TouchID::getKey(const QString& databasePath, QByteArray& passwordKey) const
     // decrypt PasswordKey from memory using AES
     passwordKey = m_encryptedMasterKeys[databasePath];
     if (!aes256Decrypt.process(passwordKey)) {
+        passwordKey.clear();
         debug("TouchID::getKey - Error decryption: %s", aes256Decrypt.errorString().toUtf8().constData());
         return false;
     }
 
     return true;
+}
+
+bool TouchID::containsKey(const QString& dbPath) const
+{
+    return m_encryptedMasterKeys.contains(dbPath);
 }
 
 /**

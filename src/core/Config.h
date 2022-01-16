@@ -62,7 +62,6 @@ public:
         GlobalAutoTypeModifiers,
         FaviconDownloadTimeout,
         UpdateCheckMessageShown,
-        UseTouchID,
 
         LastDatabases,
         LastKeyFiles,
@@ -125,6 +124,7 @@ public:
         Security_ResetTouchIdScreenlock,
         Security_NoConfirmMoveEntryToRecycleBin,
         Security_EnableCopyOnDoubleClick,
+        Security_QuickUnlock,
 
         Browser_Enabled,
         Browser_ShowNotification,

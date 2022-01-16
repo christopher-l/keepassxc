@@ -216,6 +216,11 @@ if(WIN32)
             ${keepassx_SOURCES}
             gui/osutils/winutils/ScreenLockListenerWin.cpp
             gui/osutils/winutils/WinUtils.cpp)
+    if(MSVC)
+        # Windows Hello support only with Visual Studio builds
+        set(WITH_XC_WINDOWSHELLO ON)
+        list(APPEND keepassx_SOURCES winhello/WindowsHello.cpp)
+    endif()
 endif()
 
 set(keepassx_SOURCES ${keepassx_SOURCES}
@@ -364,6 +369,10 @@ if(UNIX AND NOT APPLE)
 endif()
 if(WIN32)
     target_link_libraries(keepassx_core Wtsapi32.lib Ws2_32.lib)
+    if(MSVC)
+        # Required for Windows Hello support in Visual Studio builds
+        target_link_libraries(keepassx_core WindowsApp.lib)
+    endif()
 endif()
 
 if(WIN32)

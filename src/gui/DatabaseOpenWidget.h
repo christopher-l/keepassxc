@@ -53,6 +53,11 @@ protected:
     void showEvent(QShowEvent* event) override;
     void hideEvent(QHideEvent* event) override;
     QSharedPointer<CompositeKey> buildDatabaseKey();
+    // Quick Unlock helper functions
+    bool canPerformQuickUnlock();
+    void updateQuickUnlockUi();
+    void updateQuickUnlockConfig();
+    void resetQuickUnlock();
 
     const QScopedPointer<Ui::DatabaseOpenWidget> m_ui;
     QSharedPointer<Database> m_db;
